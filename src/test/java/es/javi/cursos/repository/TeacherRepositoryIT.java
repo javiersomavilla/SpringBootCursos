@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
@@ -16,6 +17,7 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Transactional
 public class TeacherRepositoryIT {
 
     @Autowired  TeacherRepository sut;
@@ -30,7 +32,7 @@ public class TeacherRepositoryIT {
         Page<Teacher> teachers = sut.findAll(pageable);
 
         // Assert
-        assertThat(teachers.getTotalElements(), equalTo(5L));
+        assertThat(teachers.getTotalElements(), equalTo(6L));
         assertTrue(teachers.getContent().stream().anyMatch(teacher -> teacher.equals(juan)));
     }
 
