@@ -32,7 +32,7 @@ public class CourseRepositoryIT {
         Page<Course> courses = sut.findAllByActiveTrue(pageable);
 
         // Assert
-        assertThat(courses.getTotalElements(), equalTo(5L));
+        assertThat(courses.getTotalElements(), equalTo(7L));
         assertTrue(courses.getContent().stream().anyMatch(course -> course.getTeacher().equals(juan)));
     }
 
