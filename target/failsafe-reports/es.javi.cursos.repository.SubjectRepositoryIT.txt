@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: es.javi.cursos.repository.SubjectRepositoryIT
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.12 s <<< FAILURE! - in es.javi.cursos.repository.SubjectRepositoryIT
+find_subjects_should_returns_and_contains_programacion(es.javi.cursos.repository.SubjectRepositoryIT)  Time elapsed: 0.065 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <3L>
+     but: was <6L>
+	at es.javi.cursos.repository.SubjectRepositoryIT.find_subjects_should_returns_and_contains_programacion(SubjectRepositoryIT.java:36)
+

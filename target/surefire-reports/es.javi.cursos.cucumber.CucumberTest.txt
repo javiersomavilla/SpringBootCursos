@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: es.javi.cursos.cucumber.CucumberTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.464 s - in es.javi.cursos.cucumber.CucumberTest

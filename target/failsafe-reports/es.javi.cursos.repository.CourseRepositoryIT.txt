@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: es.javi.cursos.repository.CourseRepositoryIT
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.176 s <<< FAILURE! - in es.javi.cursos.repository.CourseRepositoryIT
+find_active_courses_should_return_themn_and_contains_juan_as_teacher(es.javi.cursos.repository.CourseRepositoryIT)  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <7L>
+     but: was <10L>
+	at es.javi.cursos.repository.CourseRepositoryIT.find_active_courses_should_return_themn_and_contains_juan_as_teacher(CourseRepositoryIT.java:35)
+

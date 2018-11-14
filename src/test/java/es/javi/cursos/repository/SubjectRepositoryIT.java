@@ -33,7 +33,7 @@ public class SubjectRepositoryIT {
         Page<Subject> courses = sut.findAllByCourseId(id, pageable);
 
         // Assert
-        assertThat(courses.getTotalElements(), equalTo(3L));
+        assertThat(courses.getTotalElements(), equalTo(2L));
         assertTrue(courses.getContent().stream().anyMatch(c -> c.getCourse().getName().equals("Programacion")));
     }
 

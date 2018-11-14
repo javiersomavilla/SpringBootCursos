@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Subject.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report"></a> &gt; <a href="index.source.html" class="el_package">es.javi.cursos.model</a> &gt; <span class="el_source">Subject.java</span></div><h1>Subject.java</h1><pre class="source lang-java linenums">package es.javi.cursos.model;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import javax.persistence.*;
+
+@Entity
+<span class="fc" id="L9">public class Subject {</span>
+    @Id
+    @SequenceGenerator(name = &quot;subject_generator&quot;, sequenceName = &quot;subject_generator&quot;, initialValue = 100)
+    @GeneratedValue(generator = &quot;subject_generator&quot;)
+    private Long id;
+
+    @Column
+    private String name;
+
+    @ManyToOne
+    private Course course;
+
+    public Long getId() {
+<span class="fc" id="L22">        return id;</span>
+    }
+
+    private void setId(Long id) {
+<span class="fc" id="L26">        this.id = id;</span>
+<span class="fc" id="L27">    }</span>
+
+    public String getName() {
+<span class="fc" id="L30">        return name;</span>
+    }
+
+    private void setName(String name) {
+<span class="fc" id="L34">        this.name = name;</span>
+<span class="fc" id="L35">    }</span>
+
+    public Course getCourse() {
+<span class="fc" id="L38">        return this.course;</span>
+    }
+
+    private void setCourse(Course course){
+<span class="fc" id="L42">        this.course = course;</span>
+<span class="fc" id="L43">    }</span>
+
+    @Override
+    public boolean equals(Object o) {
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">        if (this == o) return true;</span>
+
+<span class="pc bpc" id="L49" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+
+<span class="fc" id="L51">        Subject subject = (Subject) o;</span>
+
+<span class="fc" id="L53">        return new EqualsBuilder()</span>
+<span class="fc" id="L54">                .append(id, subject.id)</span>
+<span class="fc" id="L55">                .append(name, subject.name)</span>
+<span class="fc" id="L56">                .append(course, subject.course)</span>
+<span class="fc" id="L57">                .isEquals();</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L62">        return new HashCodeBuilder(17, 37)</span>
+<span class="nc" id="L63">                .append(id)</span>
+<span class="nc" id="L64">                .append(name)</span>
+<span class="nc" id="L65">                .append(course)</span>
+<span class="nc" id="L66">                .toHashCode();</span>
+    }
+
+
+    public static class Builder {
+        Subject object;
+
+<span class="fc" id="L73">        public Builder() {</span>
+<span class="fc" id="L74">            object = new Subject();</span>
+<span class="fc" id="L75">        }</span>
+
+        public Builder(Subject subject){
+<span class="fc" id="L78">            this();</span>
+<span class="fc" id="L79">            object.setId(subject.getId());</span>
+<span class="fc" id="L80">            object.setName(subject.getName());</span>
+<span class="fc" id="L81">            object.setCourse(subject.getCourse());</span>
+<span class="fc" id="L82">        }</span>
+
+        public Builder id(Long id) {
+<span class="nc" id="L85">            object.setId(id);</span>
+<span class="nc" id="L86">            return this;</span>
+        }
+
+        public Builder name(String name) {
+<span class="fc" id="L90">            object.setName(name);</span>
+<span class="fc" id="L91">            return this;</span>
+        }
+
+        public Builder course(Course course) {
+<span class="fc" id="L95">            object.setCourse(course);</span>
+<span class="fc" id="L96">            return this;</span>
+        }
+
+        public Subject build() {
+<span class="fc" id="L100">            return object;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,11 @@
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/ApplicationTests.java
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/service/TeacherServiceImplTest.java
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/controller/CourseControllerTest.java
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/controller/it/CourseControllerIt.java
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/controller/TeacherControllerTest.java
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/cucumber/CucumberTest.java
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/service/CourseServiceImplTest.java
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/repository/CourseRepositoryIT.java
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/controller/it/TeacherControllerIt.java
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/repository/TeacherRepositoryIT.java
+/Users/javiersomavilla/Documents/workspace/SpringBootCourses/src/test/java/es/javi/cursos/repository/SubjectRepositoryIT.java

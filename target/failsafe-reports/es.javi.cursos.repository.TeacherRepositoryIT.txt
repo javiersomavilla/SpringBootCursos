@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: es.javi.cursos.repository.TeacherRepositoryIT
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.864 s <<< FAILURE! - in es.javi.cursos.repository.TeacherRepositoryIT
+find_all_teachers_should_return_them_and_contains_juan(es.javi.cursos.repository.TeacherRepositoryIT)  Time elapsed: 0.362 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <6L>
+     but: was <9L>
+	at es.javi.cursos.repository.TeacherRepositoryIT.find_all_teachers_should_return_them_and_contains_juan(TeacherRepositoryIT.java:35)
+
